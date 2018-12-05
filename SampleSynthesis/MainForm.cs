@@ -114,28 +114,40 @@ namespace SampleSynthesis
             }
             else
             {
-                if (File.Exists(path))
+                try
                 {
-                    var lines = File.ReadAllLines(path).ToList();
-                    if (this.rdoRandom.Checked)
-                    {
-                        lines = lines.Select(x => new KeyValuePair<string, string>(GenerateRandomCode(lines.Count), x))
-                        .OrderBy(x => x.Key).Select(x => x.Value).ToList();
-                    }
+                    this.btnVoice.Enabled = false;
+                    _synth.SpeakAsync("Let's begin!");
 
-                    this.Invoke(new Action(() =>
+                    if (File.Exists(path))
                     {
-                        this.txtVoice.Clear();
-                    }));
-                    foreach (var text in lines)
-                    {
-                        _synth.Speak(text.Trim());
-                        this.txtVoice.AppendText($"{text}{Environment.NewLine}");
-                        if (this.cboInterval.SelectedIndex > -1)
+                        var lines = File.ReadAllLines(path).ToList();
+                        if (this.rdoRandom.Checked)
                         {
-                            Thread.Sleep(Convert.ToInt32(this.cboInterval.SelectedItem) * 1000);
+                            lines = lines.Select(x => new KeyValuePair<string, string>(GenerateRandomCode(lines.Count), x))
+                            .OrderBy(x => x.Key).Select(x => x.Value).ToList();
+                        }
+
+                        this.Invoke(new Action(() =>
+                        {
+                            this.txtVoice.Clear();
+                        }));
+                        foreach (var text in lines)
+                        {
+                            _synth.Speak(text.Trim());
+                            this.txtVoice.AppendText($"{text}{Environment.NewLine}");
+                            if (this.cboInterval.SelectedIndex > -1)
+                            {
+                                Thread.Sleep(Convert.ToInt32(this.cboInterval.SelectedItem) * 1000);
+                            }
                         }
                     }
+
+                    _synth.SpeakAsync("Thank you for your effort!");
+                }
+                finally
+                {
+                    this.btnVoice.Enabled = true;
                 }
             }
         }
