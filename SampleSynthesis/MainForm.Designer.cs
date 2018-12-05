@@ -97,10 +97,12 @@
             // 
             // txtVoice
             // 
+            this.txtVoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVoice.Location = new System.Drawing.Point(316, 130);
             this.txtVoice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtVoice.Multiline = true;
             this.txtVoice.Name = "txtVoice";
+            this.txtVoice.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtVoice.Size = new System.Drawing.Size(276, 188);
             this.txtVoice.TabIndex = 6;
             // 
