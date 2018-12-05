@@ -117,10 +117,11 @@ namespace SampleSynthesis
                 try
                 {
                     this.btnVoice.Enabled = false;
-                    _synth.SpeakAsync("Let's begin!");
 
                     if (File.Exists(path))
                     {
+                        _synth.SpeakAsync("Let's begin!");
+
                         var lines = File.ReadAllLines(path).ToList();
                         if (this.rdoRandom.Checked)
                         {
@@ -141,9 +142,9 @@ namespace SampleSynthesis
                                 Thread.Sleep(Convert.ToInt32(this.cboInterval.SelectedItem) * 1000);
                             }
                         }
-                    }
 
-                    _synth.SpeakAsync("Thank you for your effort!");
+                        _synth.SpeakAsync("Thank you for your effort!");
+                    }
                 }
                 finally
                 {
