@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.cboVoice = new System.Windows.Forms.ComboBox();
             this.rdoOrder = new System.Windows.Forms.RadioButton();
@@ -44,25 +45,28 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 12);
+            this.treeView1.Location = new System.Drawing.Point(9, 10);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(402, 354);
+            this.treeView1.Size = new System.Drawing.Size(302, 307);
             this.treeView1.TabIndex = 0;
             // 
             // cboVoice
             // 
-            this.cboVoice.Location = new System.Drawing.Point(421, 13);
+            this.cboVoice.Location = new System.Drawing.Point(316, 11);
+            this.cboVoice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cboVoice.Name = "cboVoice";
-            this.cboVoice.Size = new System.Drawing.Size(121, 23);
+            this.cboVoice.Size = new System.Drawing.Size(92, 21);
             this.cboVoice.TabIndex = 1;
             this.cboVoice.Text = "语音引擎";
             // 
             // rdoOrder
             // 
             this.rdoOrder.AutoSize = true;
-            this.rdoOrder.Location = new System.Drawing.Point(624, 61);
+            this.rdoOrder.Location = new System.Drawing.Point(468, 53);
+            this.rdoOrder.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rdoOrder.Name = "rdoOrder";
-            this.rdoOrder.Size = new System.Drawing.Size(58, 19);
+            this.rdoOrder.Size = new System.Drawing.Size(49, 17);
             this.rdoOrder.TabIndex = 2;
             this.rdoOrder.Text = "顺序";
             this.rdoOrder.UseVisualStyleBackColor = true;
@@ -71,9 +75,10 @@
             // 
             this.rdoRandom.AutoSize = true;
             this.rdoRandom.Checked = true;
-            this.rdoRandom.Location = new System.Drawing.Point(687, 61);
+            this.rdoRandom.Location = new System.Drawing.Point(515, 53);
+            this.rdoRandom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rdoRandom.Name = "rdoRandom";
-            this.rdoRandom.Size = new System.Drawing.Size(58, 19);
+            this.rdoRandom.Size = new System.Drawing.Size(49, 17);
             this.rdoRandom.TabIndex = 3;
             this.rdoRandom.TabStop = true;
             this.rdoRandom.Text = "随机";
@@ -81,9 +86,10 @@
             // 
             // btnVoice
             // 
-            this.btnVoice.Location = new System.Drawing.Point(421, 101);
+            this.btnVoice.Location = new System.Drawing.Point(316, 88);
+            this.btnVoice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVoice.Name = "btnVoice";
-            this.btnVoice.Size = new System.Drawing.Size(101, 33);
+            this.btnVoice.Size = new System.Drawing.Size(76, 29);
             this.btnVoice.TabIndex = 5;
             this.btnVoice.Text = "语音";
             this.btnVoice.UseVisualStyleBackColor = true;
@@ -91,10 +97,11 @@
             // 
             // txtVoice
             // 
-            this.txtVoice.Location = new System.Drawing.Point(421, 150);
+            this.txtVoice.Location = new System.Drawing.Point(316, 130);
+            this.txtVoice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtVoice.Multiline = true;
             this.txtVoice.Name = "txtVoice";
-            this.txtVoice.Size = new System.Drawing.Size(367, 216);
+            this.txtVoice.Size = new System.Drawing.Size(276, 188);
             this.txtVoice.TabIndex = 6;
             // 
             // cboRate
@@ -122,9 +129,10 @@
             "8",
             "9",
             "10"});
-            this.cboRate.Location = new System.Drawing.Point(891, 36);
+            this.cboRate.Location = new System.Drawing.Point(668, 31);
+            this.cboRate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cboRate.Name = "cboRate";
-            this.cboRate.Size = new System.Drawing.Size(121, 23);
+            this.cboRate.Size = new System.Drawing.Size(92, 21);
             this.cboRate.TabIndex = 7;
             this.cboRate.Text = "语速";
             // 
@@ -143,9 +151,10 @@
             "80",
             "90",
             "100"});
-            this.cboVolume.Location = new System.Drawing.Point(891, 7);
+            this.cboVolume.Location = new System.Drawing.Point(668, 6);
+            this.cboVolume.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cboVolume.Name = "cboVolume";
-            this.cboVolume.Size = new System.Drawing.Size(121, 23);
+            this.cboVolume.Size = new System.Drawing.Size(92, 21);
             this.cboVolume.TabIndex = 8;
             this.cboVolume.Text = "音量";
             // 
@@ -160,17 +169,19 @@
             "15",
             "30",
             "60"});
-            this.cboInterval.Location = new System.Drawing.Point(497, 57);
+            this.cboInterval.Location = new System.Drawing.Point(373, 49);
+            this.cboInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cboInterval.Name = "cboInterval";
-            this.cboInterval.Size = new System.Drawing.Size(121, 23);
+            this.cboInterval.Size = new System.Drawing.Size(92, 21);
             this.cboInterval.TabIndex = 9;
             this.cboInterval.Text = "间隔（秒）";
             // 
             // btnPause
             // 
-            this.btnPause.Location = new System.Drawing.Point(557, 101);
+            this.btnPause.Location = new System.Drawing.Point(418, 88);
+            this.btnPause.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(101, 33);
+            this.btnPause.Size = new System.Drawing.Size(76, 29);
             this.btnPause.TabIndex = 10;
             this.btnPause.Text = "暂停";
             this.btnPause.UseVisualStyleBackColor = true;
@@ -178,9 +189,10 @@
             // 
             // btnResume
             // 
-            this.btnResume.Location = new System.Drawing.Point(687, 101);
+            this.btnResume.Location = new System.Drawing.Point(515, 88);
+            this.btnResume.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnResume.Name = "btnResume";
-            this.btnResume.Size = new System.Drawing.Size(101, 33);
+            this.btnResume.Size = new System.Drawing.Size(76, 29);
             this.btnResume.TabIndex = 11;
             this.btnResume.Text = "恢复";
             this.btnResume.UseVisualStyleBackColor = true;
@@ -189,9 +201,10 @@
             // chkContinuous
             // 
             this.chkContinuous.AutoSize = true;
-            this.chkContinuous.Location = new System.Drawing.Point(421, 59);
+            this.chkContinuous.Location = new System.Drawing.Point(316, 51);
+            this.chkContinuous.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.chkContinuous.Name = "chkContinuous";
-            this.chkContinuous.Size = new System.Drawing.Size(59, 19);
+            this.chkContinuous.Size = new System.Drawing.Size(50, 17);
             this.chkContinuous.TabIndex = 12;
             this.chkContinuous.Text = "连续";
             this.chkContinuous.UseVisualStyleBackColor = true;
@@ -199,9 +212,9 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 547);
+            this.ClientSize = new System.Drawing.Size(768, 474);
             this.Controls.Add(this.chkContinuous);
             this.Controls.Add(this.btnResume);
             this.Controls.Add(this.btnPause);
@@ -214,6 +227,8 @@
             this.Controls.Add(this.rdoOrder);
             this.Controls.Add(this.cboVoice);
             this.Controls.Add(this.treeView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
